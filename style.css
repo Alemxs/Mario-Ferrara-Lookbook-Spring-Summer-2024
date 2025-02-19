@@ -10,6 +10,7 @@ body {
     background-color: #F0F0F0; /* Bianco sporco */
     color: #333;
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Evita lo scorrimento orizzontale */
 }
 
 /* HEADER */
@@ -58,6 +59,7 @@ header {
     padding-top: 100px;
     background-color: #F5F5F5; /* Bianco sporco */
     min-height: calc(100vh - 100px); /* Adatta l'altezza sottraendo il footer */
+    overflow: hidden; /* Evita lo scorrimento orizzontale */
 }
 
 /* Contenitore del Flipbook */
@@ -112,7 +114,6 @@ header {
     text-align: center;
     margin-top: 5px;
 }
-
 
 /* IMMAGINI NELLE PAGINE */
 .page img {
@@ -222,15 +223,41 @@ footer {
 
 @media (max-width: 768px) {
     /* Header */
+    header {
+        padding: 10px 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
     header .container {
         flex-direction: column;
-        text-align: center;
         gap: 10px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    .collection {
+        font-size: 20px;
+        position: static;
+        transform: none;
+        margin-top: 10px;
     }
 
     nav ul {
         flex-direction: column;
         gap: 15px;
+    }
+    
+    #flipbook-section {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .flipbook {
+        width: 95vw;
+        height: 57vw;
     }
 
     /* Footer */
@@ -243,6 +270,36 @@ footer {
     .social-icons {
         justify-content: center;
     }
+}
+
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .collection {
+        font-size: 18px;
+        position: static;
+        transform: none;
+        margin-top: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
     
     #flipbook-section {
         height: auto;
@@ -251,18 +308,77 @@ footer {
 
     .flipbook {
         width: 95vw;
-        height: 57vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .flipbook {
-        width: 100vw;
         height: 60vw;
     }
 
-    .flipbook .hard {
-        font-size: 14px;
-        padding: 10px;
+    .hard h2{
+        font-size: 24px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Header */
+    header {
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo a {
+        font-size: 18px;
+    }
+
+    .collection {
+        font-size: 18px;
+        position: static;
+        transform: none;
+        margin-top: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #flipbook-section {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .flipbook {
+        width: 95vw;
+        height: 60vw;
+    }
+
+    /* Riduzione della dimensione h2 */
+    .hard h2 {
+        font-size: 18px; /* Dimensione ridotta per h2 */
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
