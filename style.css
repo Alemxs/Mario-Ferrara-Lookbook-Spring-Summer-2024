@@ -307,12 +307,12 @@ footer {
     }
 
     .flipbook {
-        width: 95vw;
-        height: 60vw;
+        width: 100vw;
+        height: 65vw;
     }
 
     .hard h2{
-        font-size: 24px;
+        font-size: 20px;
     }
 
     /* Footer */
